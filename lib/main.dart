@@ -15,11 +15,9 @@ class BookLy extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData().copyWith(
-          scaffoldBackgroundColor: kPrimaryColor,
-          
-           //fromARGB(255, 25, 13, 66)
-           ),
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: kPrimaryColor,
+      ),
       home: const SplashView(),
     );
   }
