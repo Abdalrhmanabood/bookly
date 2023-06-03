@@ -1,6 +1,6 @@
-import 'package:bookly/Features/home/presentation/views/widget/custom_list_view_item.dart';
 import 'package:flutter/material.dart';
-import 'custom_app_bar.dart';
+import 'featured_app_bar.dart';
+import 'featured_book_list_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -9,8 +9,8 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        CustomAppBar(),
-        CustomListViewItem(),
+        FeaturedAppBar(),
+        FeaturedBooksListView(),
       ],
     );
   }
