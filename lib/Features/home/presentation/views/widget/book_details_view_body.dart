@@ -2,6 +2,7 @@ import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 import 'book_reating.dart';
+import 'books_action.dart';
 import 'feature_book_details_app_bar.dart';
 import 'feature_book_image.dart';
 
@@ -23,13 +24,13 @@ class BookDetailsViewBody extends StatelessWidget {
           const SizedBox(
             height: 43,
           ),
-           Text(
+          Text(
             'The Jungle Book',
             style: Styles.textStyle30.copyWith(
               fontWeight: FontWeight.bold,
             ),
           ),
-           const SizedBox(
+          const SizedBox(
             height: 6,
           ),
           Opacity(
@@ -45,9 +46,13 @@ class BookDetailsViewBody extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-         const BookReating(
-          mainAxisAlignment: MainAxisAlignment.center,
-         ),
+          const BookReating(
+            mainAxisAlignment: MainAxisAlignment.center,
+          ),
+          const SizedBox(
+            height: 37,
+          ),
+          const BooksAction(),
         ],
       ),
     );
