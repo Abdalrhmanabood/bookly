@@ -1,6 +1,7 @@
 import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
+import 'book_reating.dart';
 import 'feature_book_details_app_bar.dart';
 import 'feature_book_image.dart';
 
@@ -40,7 +41,13 @@ class BookDetailsViewBody extends StatelessWidget {
                 fontStyle: FontStyle.italic,
               ),
             ),
-          )
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+         const BookReating(
+          mainAxisAlignment: MainAxisAlignment.center,
+         ),
         ],
       ),
     );
