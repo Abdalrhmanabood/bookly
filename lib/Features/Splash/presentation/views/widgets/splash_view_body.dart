@@ -39,7 +39,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Image.asset(AssetsData.logo),
-        const SizedBox(height: 3),
+        const SizedBox(height: 4),
         SlidingText(slidingAnimation: slidingAnimation),
       ],
     );
