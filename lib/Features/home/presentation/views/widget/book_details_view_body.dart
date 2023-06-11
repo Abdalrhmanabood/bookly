@@ -1,84 +1,27 @@
-import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-
-import 'book_reating.dart';
-import 'books_action.dart';
+import 'book_details_section.dart';
 import 'feature_book_details_app_bar.dart';
-import 'feature_book_image.dart';
-import 'similar_books_list_view.dart';
-
+import 'similar_books_section.dart';
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
-
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
-    return CustomScrollView(
+    return const CustomScrollView(
       slivers: [
         SliverFillRemaining(
           hasScrollBody: false,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
+            padding: EdgeInsets.symmetric(horizontal: 30),
             child: Column(
               children: [
-                const FeatureBookDetailsAppBar(),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: width * .2),
-                  child: const FeatureBookImage(),
-                ),
-                const SizedBox(
-                  height: 43,
-                ),
-                Text(
-                  'The Jungle Book',
-                  style: Styles.textStyle30.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(
-                  height: 6,
-                ),
-                Opacity(
-                  opacity: .7,
-                  child: Text(
-                    'Rudyard Kipling',
-                    style: Styles.textStyle18.copyWith(
-                      fontWeight: FontWeight.w500,
-                      fontStyle: FontStyle.italic,
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                const BookReating(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                ),
-                const SizedBox(
-                  height: 37,
-                ),
-                const BooksAction(),
-                const Expanded(
+                FeatureBookDetailsAppBar(),
+                BookDetailsSection(),
+                Expanded(
                   child: SizedBox(
                     height: 50,
                   ),
                 ),
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    'You can also like',
-                    style: Styles.textStyle14.copyWith(
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                const SimilarBooksListView(),
-                const SizedBox(
-                  height: 40,
-                ),
+                SimilarBooksSection(),
               ],
             ),
           ),
